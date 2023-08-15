@@ -1,0 +1,33 @@
+### GET MOVIES
+GET http://localhost:1234/movies/
+### GET MOVIE BY ID
+GET http://localhost:1234/movies/1
+### GET MOVIES FROM GENRE
+GET http://localhost:1234/movies?genre=terror   
+### POST A MOVIE
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "MAx Man",
+    "year": 1923,
+    "director": "Lana Wachowski",
+    "duration": 136,
+    "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+    "genre": ["Terror", 
+    "Sci-Fi"],
+    "rate":8.5
+}
+
+###Actualizar una pelicula
+
+
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "title": "Yo soy"
+}
+
+### Delete
+DELETE http://localhost:1234/movies/8fb17ae1-bdfe-45e5-a871-4772d7e526b8
